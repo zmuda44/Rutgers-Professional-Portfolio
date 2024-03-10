@@ -4,6 +4,8 @@
     margin: 0;
 }
 
+/* do all of this in a reset file */
+
 :root {
     --primary: black;
     --text-light: rgb(255, 255, 255);
@@ -20,11 +22,12 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
+    padding: 0 2%;
 }
 
 
 
-/* 1. Header Section */
+/* Header Section */
 
 header {
     background-color: var(--primary);
@@ -39,10 +42,11 @@ header .container {
 
 .brand {
     width: 33%;
+    border: solid;
 }
 
 nav {
-    width: 33%;
+    width: 50%;
     padding: 0 4%;
 }
 
@@ -107,7 +111,7 @@ header a:visited::after {
     margin-top: 10px;
 }
 
-/* 3. Main section */
+/* Main section */
 
 main {
     margin-top: 20px;
@@ -118,7 +122,8 @@ main {
 .section-block {
     display: flex;
     margin: 5px 0;
-    background-color: var(--section-bg)
+    background-color: var(--section-bg);
+    border-radius: 10px;
     
 }
 
@@ -137,6 +142,11 @@ main img {
 }
 
     /* About me */
+
+#about-me .col-2 {
+    display: flex;
+    align-items: center;
+}
 
     /* Projects */
 
@@ -160,7 +170,6 @@ main img {
     width: 100%;
     justify-content: space-between;
     gap: 2%;
-
 }
 
 .card {
@@ -168,8 +177,7 @@ main img {
     margin-top: 5px;
     height: 100px;
     width: 47%;
-    position: relative;
-    
+    position: relative;    
 }
 
 .card img {
@@ -184,7 +192,84 @@ main img {
        
 }
 
-    /*  */
+/* Footer Section */
+
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    height: 100px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 980px) {
+    /* navbar to hamburger menu and hamburger menu animations */
+    nav {
+       display: flex;
+       justify-content: end;
+       /* border: solid; */
+    }
+    
+    nav ul {
+        display: block;
+        opacity: 0;
+        transform: translateY(-500px);
+        background-color: gray;
+        margin-right: 25%;
+        width: 500px;
+        padding: 10px;
+        transition: all .5s ease-in-out;
+
+    }
+
+    nav ul.active {
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    #hamburger span {
+        display: block;
+        background-color: white;
+        width: 25px;
+        height: 5px;
+        margin: 1px 0;
+    }
+
+    #hamburger.active span:nth-child(1) {
+        transform: translateY(65%) rotate(45deg);
+    }
+
+    #hamburger.active span:nth-child(2) {
+        display: none;
+    }
+
+    #hamburger.active span:nth-child(3) {
+        transform: translateY(-65%) rotate(-45deg);
+    }
+
+    header a:hover::after {
+        display: none;
+    }
+  
+}
+
+@media screen and (max-width: 860px) {
+   .card {
+        width: 100%;
+        position: relative;    
+    }
+
+}
+
+
 
 
 
