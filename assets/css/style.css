@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary: black;
+    --text-light: rgb(255, 255, 255);
+    --text-dark: rgb(37, 37, 37);
+    --link-decoration: aqua;
+    --secondary: yellow;
+    --section-bg: gray;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+/* 1. Header Section */
+
+header {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    width: 33%;
+}
+
+nav {
+    width: 33%;
+    padding: 0 4%;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+/* header a {
+     color: var(--text-light);     
+} */
+
+header a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+  }
+
+header a:hover {
+    color: var(--link-decoration);
+}
+
+header a:focus {
+    /* color: yellow; */
+}
+
+    /* link hover underline animation */
+
+header a::after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 0px;
+    height: 1px;
+    background-color: aqua;
+    margin-top: 5px;                
+}
+
+header a:hover::after {
+    width: 75%;
+    transition: all .5s;
+}
+
+header a:focus::after {
+    background-color: white;
+    
+    
+} 
+
+header a:visited::after {
+    /* background-color: white; */
+    
+}
+
+
+/* 2. Hero banner */
+
+.hero {
+    background-color: gray;
+    margin-top: 10px;
+}
+
+/* 3. Main section */
+
+main {
+    margin-top: 20px;
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.section-block {
+    display: flex;
+    margin: 5px 0;
+    background-color: var(--section-bg)
+    
+}
+
+.col-1 {
+    width: 25%;
+    padding: 10px;
+}
+
+.col-2 {
+    width: 75%;
+    padding: 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+    /* About me */
+
+    /* Projects */
+
+#projects .col-2 {
+  
+}
+
+.feature-block {
+    width: 100%;
+    background-color: red;
+    height: 200px;
+    
+}
+
+.feature-block img {
+    height: 100%;
+}
+.project-block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2%;
+
+}
+
+.card {
+    background-color: black;
+    margin-top: 5px;
+    height: 100px;
+    width: 47%;
+    position: relative;
+    
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+       
+}
+
+    /*  */
+
+
+
+
+

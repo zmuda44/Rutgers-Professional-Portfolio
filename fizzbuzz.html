@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        .result {
+            color: green
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to FizzBuzz</h1>
+    <h3>By Greg Bailey</h3>
+
+    <button id="fizzbuzz-btn">Click here to get started</button>
+
+    <div class="container">
+        <div id="fizzbuzz-output"></div>
+    </div>
+
+      
+  <script>
+            document.getElementById("fizzbuzz-btn").addEventListener("click", function() {
+            var fizzBuzzOutput = document.getElementById("fizzbuzz-output");
+            fizzBuzzOutput.innerHTML = '';  // Clear previous output
+
+            for (var i = 1; i <= 30; i++) {
+                var outputText = '';
+
+                if (i % 3 === 0 && i % 5 === 0) {
+                    outputText = "Fizz Buzz";
+                } else if (i % 3 === 0) {
+                    outputText = "Fizz";
+                } else if (i % 5 === 0) {
+                    outputText = "Buzz";
+                } else {
+                    outputText = i;
+                }
+
+                // Create a new div for each result
+                var resultDiv = document.createElement("div");
+                resultDiv.textContent = outputText;
+                resultDiv.classList.add("result");
+                fizzBuzzOutput.appendChild(resultDiv);
+            }
+        });
+        
+        
+    </script>
+
+ 
+
+</body>
+</html>
