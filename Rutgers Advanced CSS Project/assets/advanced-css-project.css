@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --off-white: rgb(175, 175, 175);
+    --purple: rgb(207, 7, 207);
+    --center: auto;
+    --off-black: rgb(39, 39, 39);
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+}
+
+header h1 {
+    color: var(--purple);
+    text-align: center;
+}
+
+header p {
+    color: var(--off-white);
+    text-align: center;
+    /* margin-bottom: 30px; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;    
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 1200px;
+    color: var(--purple);
+    
+}
+
+.card {
+    width: 25%;
+    border: 1px dashed var(--off-white);
+    padding: 1%;
+    margin-top: 10px;
+}
+
+.card h2 {
+    border: 2px solid var(--off-white);
+    padding: 3px;
+    margin-top: -20px;
+    background-color: var(--off-black);
+}
+
+.card p:nth-child(2) {
+    color: red;
+    margin: 10px 0;
+}
+
+.card p:nth-child(3) {
+    color: var(--off-white);
+    padding: 3px;
+    background-color: var(--purple);
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 2px;
+    background-color: var(--off-white);
+}
+
+.hamburger:hover span:nth-child(1) {
+    transform: rotate(45deg);
+    transform: translateY(-200px);
+}
+
+li:nth-child(1) {
+    color: red;
+}
+
+
+
+
+
+
