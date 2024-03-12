@@ -312,6 +312,7 @@ footer {
     }
 
     nav ul.active {
+        /* display: block; */
         transform: translateY(0);
         opacity: 1;
         
@@ -345,6 +346,12 @@ footer {
     }
 
     header a:hover::after {
+        display: none;
+    }
+
+    /* Products */
+
+    .card::after {
         display: none;
     }
   
@@ -386,9 +393,13 @@ footer {
         font-size: .8rem;
     }
 
+    /* About me */
+
     #about-me img {
         display: none;
     }
+
+    /* Projects */
 
     .section-block {
         display: flex;
@@ -404,6 +415,8 @@ footer {
         
     }
 
+    /* Contact me */
+
     .contact-info {
         display: flex;
         flex-direction: column;
@@ -414,6 +427,14 @@ footer {
 
     .contact-info p a {
         padding-top: 2px;
+    }
+
+    #contact-me form {
+        margin-bottom: 10px;
+    }
+
+    #contact-me form button {
+        margin: 0 auto;        
     }
 
 }
