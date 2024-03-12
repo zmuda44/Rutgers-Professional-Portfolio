@@ -8,11 +8,11 @@
 
 :root {
     --primary: rgb(10, 10, 10);
-    --primary-fade: rgb(10, 10, 10, .4);
+    --primary-fade: rgb(10, 10, 10, .6);
     --text-light: rgb(255, 255, 255);
     --text-dark: rgb(37, 37, 37);
     --link-decoration: aqua;
-    --secondary: yellow;
+    --secondary: blue;
     --section-bg: gray;
 }
 
@@ -150,7 +150,7 @@ main .container {
 
 .col-1 {
     width: 25%;
-    padding: 10px;
+    margin: 20px;
 }
 
 .col-2 {
@@ -197,8 +197,7 @@ main img {
     box-shadow: 5px 5px 5px black;
     border: 5px solid;
     padding: 2px;
-    background-color: var(--primary-fade);
-    
+    background-color: var(--primary-fade);    
 }
 
 .feature-block:hover {
@@ -232,7 +231,13 @@ main img {
     position: absolute;
     bottom: 0;
     right: 0; 
-    z-index: 10;      
+    z-index: 10;
+    bottom: 10px;
+    right: 10px; 
+    color: var(--text-light);
+    box-shadow: 5px 5px 5px black;
+    padding: 2px;
+    background-color: var(--primary-fade);          
 }
 
 .card a {
@@ -261,13 +266,31 @@ main img {
     width: 0;
 }
 
+    /* Contact me */
+
+#contact-me .col-2 {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    gap: 4%;
+}
+
+#contact-me p {
+    padding-top: 5px;
+}
+
+
+
 /* Footer Section */
 
 footer {
     background-color: var(--primary);
     color: var(--text-light);
     height: 100px;
+    margin-top: 5px;
 }
+
+
 
 /* Responsive Design */
 
@@ -354,9 +377,14 @@ footer {
         position: relative;     */
     }
 
+    .contact-info p a {
+        display: block;
+        
+    } 
+
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
     header .brand {
         font-size: .8rem;
     }
@@ -376,8 +404,21 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        border: solid;
+        
     }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .contact-info p a {
+        padding-top: 2px;
+    }
+
 }
 
 

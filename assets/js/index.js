@@ -7,3 +7,7 @@ document.getElementById("hamburger").addEventListener("click", function () {
     this.classList.toggle("active");
 })
 
+//Copyright at bottom of footer
+
+let copyRightDate = document.querySelector("footer span");
+copyRightDate.innerHTML = new Date().getFullYear();
