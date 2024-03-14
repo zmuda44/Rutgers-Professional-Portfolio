@@ -3,13 +3,8 @@
     --primary-fade: rgb(10, 10, 10, .6);
     --text-light: rgb(255, 255, 255);
     --text-dark: rgb(37, 37, 37);
-    --link-decoration: aqua;
-    --secondary: blue;
+    --secondary: #28adbf;
     --section-bg: gray;
-}
-
-body {
-    font-family: 'Trebuchet MS', 'Arial', sans-serif;
 }
 
 .container {
@@ -17,8 +12,6 @@ body {
     margin: auto;
     padding: 2%;
 }
-
-
 
 /* Header Section */
 
@@ -31,18 +24,15 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: solid red; */
 }
 
 .brand {
     width: 33%;
-    /* border: solid; */
 }
 
 nav {
     width: 50%;
-    padding: 0 4%;
-    
+    padding: 0 4%;    
 }
 
 header ul {
@@ -51,28 +41,21 @@ header ul {
     list-style-type: none;
 }
 
-/* header a {
-     color: var(--text-light);     
-} */
-
 header li {
     margin: 1.05rem 0;
 }
+
 header a {
     text-decoration: none;
     position: relative;
-    color: white;
-  }
+    color: var(--text-light);
+}
 
 header a:hover {
-    color: var(--link-decoration);
+    color: var(--secondary);
 }
 
-header a:focus {
-    /* color: yellow; */
-}
-
-    /* link hover underline animation */
+    /* Link hover underline animation. Large screens only */
 
 header a::after {
     content: " ";
@@ -81,7 +64,7 @@ header a::after {
     left: 0;
     width: 0px;
     height: 1px;
-    background-color: aqua;
+    background-color: var(--secondary);
     margin-top: 5px;                
 }
 
@@ -89,18 +72,6 @@ header a:hover::after {
     width: 75%;
     transition: all .5s;
 }
-
-header a:focus::after {
-    background-color: white;
-    
-    
-} 
-
-header a:visited::after {
-    /* background-color: white; */
-    
-}
-
 
 /* 2. Hero banner */
 
@@ -112,11 +83,6 @@ header a:visited::after {
     width: 100%;
 }
 
-.hero h3 {
-    margin: 0;
-    padding: 0;
-}
-
 /* Main section */
 
 main {
@@ -126,15 +92,13 @@ main {
 
 main .container {
     background-color: var(--primary);
-    /* border: solid red; */
 }
 
 .section-block {
     display: flex;
     margin: 5px 0;
     background-color: var(--section-bg);
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
 .col-1 {
@@ -162,7 +126,6 @@ main img {
 
 .feature-block {
     width: 100%;
-    background-color: red;
     height: 200px; 
     position: relative;   
 }
@@ -179,10 +142,10 @@ main img {
     bottom: 10px;
     right: 10px; 
     color: var(--text-light);
-    box-shadow: 5px 5px 5px black;
+    background-color: var(--primary-fade); 
+    padding: 2px;    
     border: 5px solid;
-    padding: 2px;
-    background-color: var(--primary-fade);    
+    box-shadow: 5px 5px 5px black;     
 }
 
 .feature-block:hover {
@@ -194,8 +157,7 @@ main img {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    gap: 2%;
-    
+    gap: 2%;    
 }
 
 .card {
@@ -262,8 +224,6 @@ main img {
     padding-top: 5px;
 }
 
-
-
 /* Footer Section */
 
 footer {
@@ -278,7 +238,9 @@ footer {
 /* Responsive Design */
 
 @media screen and (max-width: 1200px) {
+   
     /* navbar to hamburger menu and hamburger menu animations */
+    
     nav {
        display: flex;
        justify-content: end;
@@ -331,37 +293,34 @@ footer {
         display: none;
     }
 
-    /* Products */
+    /* Projects */
 
     .card::after {
         display: none;
     }  
-}
 
-@media screen and (max-width: 1200px) {
     .feature-block {
         width: 100%;
-        background-color: red;
         height: 250px; 
         position: relative;   
-    }
-   
-   
-   
+    }  
+
     .card {
         width: 100%;
         position: relative; 
         height: 150px;   
     }
 
+    /* Contact me */
     .contact-info p a {
-        display: block;
-        
+        display: block;        
     } 
-
 }
 
 @media screen and (max-width: 600px) {
+    
+    /* Header */
+
     header .brand {
         font-size: .8rem;
     }
@@ -395,7 +354,6 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-
     }
 
     .contact-info p a {
