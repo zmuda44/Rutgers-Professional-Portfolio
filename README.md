@@ -22,3 +22,9 @@ WHEN I click on the images of the applications
 THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
+
+## URL of Deployed Site
+https://zmuda44.github.io/Rutgers-Professional-Portfolio/
+
+## Screenshot of Deployed Site
+![alt text](<assets/GB Portfolio screenshot.png>)
