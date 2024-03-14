@@ -160,10 +160,6 @@ main img {
 
     /* Projects */
 
-#projects .col-2 {
-  
-}
-
 .feature-block {
     width: 100%;
     background-color: red;
@@ -203,17 +199,15 @@ main img {
 }
 
 .card {
-    background-color: var(--secondary);
-    margin-top: 2%;
-    height: 100px;
+    margin: 10px 0;
     width: 47%;
     position: relative;    
 }
 
 .card img {
-    height: 100%;
     object-fit: cover;
     object-position: 0 0;
+    height: 100%;
 }
 
 .card h3 {
@@ -288,7 +282,6 @@ footer {
     nav {
        display: flex;
        justify-content: end;
-       /* border: solid; */
     }
     
     nav ul {
@@ -300,14 +293,11 @@ footer {
         width: 500px;
         padding: 10px;
         transition: all .5s ease-in-out;
-
     }
 
     nav ul.active {
-        /* display: block; */
         transform: translateY(0);
-        opacity: 1;
-        
+        opacity: 1;        
     }
 
     #hamburger {
@@ -345,8 +335,7 @@ footer {
 
     .card::after {
         display: none;
-    }
-  
+    }  
 }
 
 @media screen and (max-width: 1200px) {
@@ -363,14 +352,6 @@ footer {
         width: 100%;
         position: relative; 
         height: 150px;   
-    }
-
-    .card {
-        /* background-color: var(--secondary);
-        margin-top: 2%;
-        height: 100px;
-        width: 47%;
-        position: relative;     */
     }
 
     .contact-info p a {
